@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>PROJECT MANAGE</title>
+  
+  
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  
+<!--replace data content-->
+<script id="entry-template" type="text/x-handlebars-template">
+  <tr>
+    <td width="45" rowspan="2">
+      <p>Projects</p>
+    </td>
+    <td width="45" rowspan="2">
+      <p>Files</p>
+    </td>
+    <td width="45" rowspan="2">
+      <p>RESP</p>
+    </td>
+    <td width="45" rowspan="2">
+      <p>STEPS</p>
+    </td>
+    <td width="45" rowspan="2">
+      <p>TASK</p>
+    </td>
+    <td width="45" rowspan="2">
+      <p>H</p>
+    </td>{{#each week_days}}
+    <td width="45">
+      <p>{{day}}</p>
+    </td>{{/each}}
+    <td width="45" rowspan="2">
+      <p>HT</p>
+    </td>
+    <td width="45" rowspan="2">
+      <p>START</p>
+    </td>
+    <td width="45" rowspan="2">
+      <p>END</p>
+    </td>
+    <td width="45" rowspan="2">
+      <p>PR</p>
+    </td>
+    <td width="45" rowspan="2">
+      <p>COMMENT</p>
+    </td>
+    <td width="45" rowspan="2">
+      <p>WEEK</p>
+    </td>
+    <td width="45" rowspan="2">
+      <p>LINK</p>
+    </td>
+  </tr>
+  <tr>{{#each week_days}}
+    <td width="45">
+      <p>{{date}}</p>
+    </td>{{/each}}
+  </tr>{{#each plan}}
+  <tr>
+    <td width="45">
+      <p>{{project_name}}</p>
+    </td>
+    <td width="45">
+      <p><img scr="{{images}}" alt="images"/></p>
+    </td>
+    <td width="45">
+      <p>{{resp}}</p>
+    </td>
+    <td width="45">
+      <p>{{steps}}</p>
+    </td>
+    <td width="45">
+      <p>{{task}}</p>
+    </td>
+    <td width="45">
+      <p>{{hours}}</p>
+    </td>{{#each this.days}}
+    <td width="45">
+      <p>{{date}}</p>
+    </td>{{/each}}
+    <td width="45">
+      <p>{{ht}}</p>
+    </td>
+    <td width="45">
+      <p>{{start_time}}</p>
+    </td>
+    <td width="45">
+      <p>{{end_time}}</p>
+    </td>
+    <td width="45">
+      <p>PR TEXT</p>
+    </td>
+    <td width="45">
+      <p>{{comment}}</p>
+    </td>
+    <td width="45">
+      <p>{{week}}</p>
+    </td>
+    <td width="45">
+      <p><a href="{{url}}" title="link name">Link</a></p>
+    </td>
+  </tr>{{/each}}
+</script>
+<div class="wrapper">
+  <div class="container">
+    <table border="1" cellspacing="0" cellpadding="0">
+      <tbody data-template="data-template">
+        <div class="container"></div>
+      </tbody>
+    </table>
+  </div>
+</div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js'></script>
+
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>

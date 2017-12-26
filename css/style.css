@@ -1,0 +1,18 @@
+table {
+  border: 1px solid grey;
+}
+table tr p {
+  text-align: center;
+  font-size: 11px;
+  font-family: Tahoma, sans-serif;
+}
+table tr:last-child td {
+  border-bottom: 1px solid transparent;
+}
+table td {
+  padding: 5px;
+  border-right: 1px solid grey;
+  border-bottom: 1px solid grey;
+  border-top: 1px solid transparent;
+  border-left: 1px solid transparent;
+}

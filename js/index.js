@@ -1,0 +1,1 @@
+function loadData(){$.ajax({url:"https://api.myjson.com/bins/11jrhb",type:"GET",contentType:"application/json; charset=utf-8",dataType:"json"}).done(function(a){templateHandlebar(a)}).fail(function(a){console.log(a)})}function templateHandlebar(a){var t=$("#entry-template").html(),n=Handlebars.compile(t);$("[data-template]").append(n(a))}$(document).ready(function(){loadData()});
